@@ -1,0 +1,80 @@
+========================================================================
+                 NEXIVO - HOW TO RUN GUIDE (WINDOWS)
+========================================================================
+
+There are TWO ways to run this:
+  METHOD 1: Quick Run (Easiest & Fastest)
+  METHOD 2: Build from Source Code (For programmers)
+
+------------------------------------------------------------------------
+METHOD 1: QUICK RUN (No installation needed)
+------------------------------------------------------------------------
+If you just want to play the game and use the app immediately:
+
+1. Look at the right-hand side of this GitHub page and click on "Releases".
+2. Download the compressed file named "NEXIVO-Playable.zip".
+3. Right-click the downloaded ZIP file and choose "Extract All" to unzip it.
+4. Open the extracted folder. 
+5. Open the NEXIVO Folder
+6. Double-click on "main.exe" to launch the application
+
+*Note: Inside this folder, you will see files named "libgcc_s_dw2-1.dll" 
+ and "libstdc++-6.dll". Leave them exactly where they are! The main 
+ "main.exe" program needs them in the same folder to open.
+
+------------------------------------------------------------------------
+METHOD 2: BUILD FROM SOURCE CODE (Using VS Code & MinGW)
+------------------------------------------------------------------------
+If you want to view, modify, and compile the C++ code yourself, follow
+these setup steps:
+
+STEP 1: Download the Compiler (MinGW)
+-------------------------------------
+The computer needs a tool called a "compiler" to turn C++ code into a 
+working app. We use a popular version called MinGW.
+
+1. Download the Mingw-w64 installer (or a pre-configured version like 
+   w64devkit / MSYS2).
+2. Install it directly onto your main drive, usually at: C:\MinGW
+3. Add the "bin" folder path (C:\MinGW\bin) to your computer's System 
+   Environment Variables. This lets your computer recognize commands 
+   like 'make' and 'g++'.
+
+STEP 2: Install Visual Studio Code (VS Code)
+-------------------------------------------
+1. Go to code.visualstudio.com, download, and install VS Code.
+2. Open VS Code, click on the Extensions icon on the left side menu 
+   (the icon looks like 4 square blocks).
+3. Search for and install these two extensions:
+   - "C/C++" (by Microsoft)
+   - "Makefile Tools" (by Microsoft)
+
+STEP 3: Arrange Your Files
+--------------------------
+Ensure your downloaded repository folder is laid out exactly like this:
+  - main.cpp (The core code file)
+  - Makefile (The automated build instruction file)
+  - main.code-workspace (The configuration file)
+  - The support folders (Fibonacci Factorial, Linked List, Snake Game, etc.)
+
+STEP 4: Open and Run the Project
+--------------------------------
+1. Launch VS Code.
+2. Click File -> Open Workspace from File...
+3. Select the file named "main.code-workspace" from your folder.
+4. Open a Terminal inside VS Code by clicking Terminal -> New Terminal 
+   from the top menu bar.
+5. In the terminal window at the bottom, type the following word and 
+   press Enter:
+   
+   make
+
+6. The computer will read the Makefile and compile the code. Once it finishes, 
+   type the following to open the app:
+
+   ./main.exe
+
+========================================================================
+TROUBLESHOOTING / COMMON ISSUES
+========================================================================
+* Issue: Clicking
